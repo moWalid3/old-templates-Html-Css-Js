@@ -1,0 +1,479 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap");
+
+/* global style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+}
+
+html {
+  font-size: 62.5%;
+}
+/* end of global style */
+
+/* style nav */
+
+nav {
+  width: 100%;
+  height: 15vh;
+
+  /* From https://css.glass */
+  background: rgba(132, 20, 20, 0.28);
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.7px);
+  -webkit-backdrop-filter: blur(2.7px);
+  border: 1px solid rgba(132, 20, 20, 0.69);
+
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  z-index: 12;
+  transform: translateY(-15rem);
+  transition: all 0.5s;
+}
+
+.target {
+  transform: translateY(0);
+  transition: all 0.5s 0.4s;
+}
+
+nav a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 4rem;
+  color: #fff;
+  transition: all 0.4s;
+}
+
+nav a:hover i {
+  font-size: 6.5rem;
+}
+
+nav a span {
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: 0.2rem;
+  text-shadow: 0.2rem 0.2rem 0.2rem black;
+  transition: all 0.5s;
+}
+
+nav a i {
+  font-size: 6rem;
+  text-shadow: 0.2rem 0.2rem 0.2rem black;
+  transition: all 0.5s;
+}
+
+.line::after {
+  content: "";
+  width: 0.2rem;
+  height: 15rem;
+  background-color: #faa307;
+  position: absolute;
+  top: -15rem;
+  left: 50%;
+}
+
+.fa-stroopwafel {
+  font-size: 8rem;
+  color: #faa307;
+  z-index: 11;
+  cursor: pointer;
+  background-color: transparent;
+  position: fixed;
+  top: 3rem;
+  left: 5rem;
+  text-shadow: 0.3rem 0.3rem 0.3rem black;
+  transition: all 0.5s 0.4s;
+}
+
+.icon-dowen {
+  transform: translateY(10rem);
+  transition: all 0.5s;
+}
+
+/* end of style nav */
+
+/* style section-1 */
+.container-section-1 {
+  box-shadow: 0.1rem 0.1rem 1rem black;
+  position: relative;
+  background-image: url(caiam-china-red-5548-hor-feat.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 0 0 20px 0;
+}
+.section-1 {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(128, 128, 128, 0.333);
+}
+.head-section-1 {
+  color: white;
+  text-align: center;
+  font-size: 6rem;
+  font-weight: 900;
+  letter-spacing: 0.2rem;
+  transform: translateY(25rem);
+  text-shadow: 0.3rem 0.3rem 1rem black;
+  text-transform: uppercase;
+}
+
+.continer-img-section-2 {
+  text-align: center;
+}
+
+.img-section-2 {
+  width: 40rem;
+
+  position: absolute;
+  top: 50rem;
+
+  transform: translate(-50%, -50%) scale(0);
+  transition: all 0.5s;
+}
+
+.continer-img-section-2 .change {
+  transform: translate(-50%, -50%) scale(1);
+  transition: all 0.5s 0.4s;
+}
+
+/* end of style section-1 */
+
+/* style section-3 */
+.section-3,
+.section-4 {
+  box-shadow: 0.1rem 0.1rem 1rem black;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(106, 4, 15);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.section-3 h1,
+.section-4 h1 {
+  text-align: center;
+  font-weight: 900;
+  font-size: 7rem;
+  color: white;
+  text-shadow: 0.3rem 0.3rem 0.3rem black;
+  letter-spacing: 0.3rem;
+}
+
+.continer-all-cards {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.continer-card {
+  background-color: #faa307;
+  height: 50vh;
+  width: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 1rem 1rem 1rem black;
+  position: relative;
+  transform: rotateY(25deg) skewX(-2deg);
+  transition: all 0.5s;
+}
+
+.continer-card::before {
+  content: "";
+  height: 100%;
+  width: 1rem;
+  background-color: #c7770f;
+  position: absolute;
+  top: 0;
+  left: -1rem;
+  transform: skewY(45deg);
+  transform-origin: right;
+  box-shadow: -0.1rem -0.1rem 0.3rem black;
+}
+
+.continer-card::after {
+  content: "";
+  height: 1rem;
+  width: 100%;
+  background-color: #c07b20;
+  position: absolute;
+  top: -1rem;
+  left: 0;
+  transform-origin: bottom;
+  transform: skewX(45deg);
+  box-shadow: -0.1rem -0.1rem 0.3rem black;
+}
+.continer-card:hover {
+  transform: translateY(-3rem) rotateY(25deg) skewX(-2deg);
+  box-shadow: 2rem 2rem 2rem black;
+}
+
+.img-card {
+  width: 20rem;
+}
+.name-card {
+  color: #111;
+  margin-bottom: 2rem;
+  font-weight: 900;
+  font-size: 2rem;
+  letter-spacing: 0.5rem;
+  text-shadow: 0.1rem 0.1rem 0.2rem black;
+}
+.btn-card {
+  margin-bottom: 2rem;
+  padding: 0.4rem 3rem;
+  border-radius: 2rem;
+  color: rgba(255, 255, 255, 0.795);
+  background-color: black;
+  width: fit-content;
+  cursor: pointer;
+  letter-spacing: 0.2rem;
+  box-shadow: -0.2rem -0.2rem 0.2rem black;
+}
+
+/* end of style section-3 */
+
+/*  style section-4 */
+
+.continer-gallery {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.gallery-section-4 {
+  height: 20rem;
+  width: 35rem;
+  margin: 3rem 1.5rem;
+  position: relative;
+}
+.gallery-section-4::before {
+  content: "";
+  height: 0;
+  width: 0.2rem;
+  background-color: white;
+  position: absolute;
+  right: 5rem;
+  top: 2rem;
+  transition: all 0.5s 0.1s;
+  z-index: 10;
+}
+.gallery-section-4:hover::before {
+  height: 80%;
+}
+
+.gallery-section-4::after {
+  content: "";
+  background-color: white;
+  position: absolute;
+  top: 6rem;
+  left: 1rem;
+  height: 0.2rem;
+  width: 0;
+  transition: all 0.5s;
+}
+
+.gallery-section-4:hover::after {
+  width: 90%;
+}
+
+.gallery-section-4 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: 0.3rem 0.3rem 0.1rem #e92929, 0.5rem 0.5rem 0.1rem #a2e946,
+    0.7rem 0.7rem 0.1rem #297ce9, 0.9rem 0.9rem 0.1rem #e92999;
+  transition: all 0.5s;
+}
+
+.gallery-section-4:hover img {
+  transform: scale(1.1);
+  box-shadow: 0.7rem 0.7rem 0.1rem #e92929, 1.4rem 1.4rem 0.1rem #a2e946,
+    2.2rem 2.2rem 0.1rem #297ce9, 3rem 3rem 0.1rem #e92999;
+  filter: blur(0.5rem);
+  opacity: 0.5rem;
+}
+
+.gallery-section-4 h3 {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 600;
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  width: 0;
+  overflow: hidden;
+  transition: all 1s;
+}
+.gallery-section-4:hover h3 {
+  width: 100%;
+  transition: all 1.5s 0.5s;
+}
+
+.gallery-section-4 p {
+  position: absolute;
+  bottom: 4rem;
+  left: 2rem;
+  font-size: 1.6rem;
+  color: white;
+  width: 70%;
+  font-weight: 300;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+
+.gallery-section-4:hover p {
+  opacity: 1;
+  visibility: visible;
+  transition: 1s 0.7s;
+}
+
+/* end of style section-4 */
+
+/* style section-5 */
+.section-5 {
+  background-color: #370617;
+  width: 100%;
+  height: 30vh;
+}
+
+.continer-sign-section-5 {
+  height: 60%;
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 5rem;
+}
+.continer-sign-section-5 div h2 {
+  color: white;
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.continer-sign-section-5 div p {
+  color: white;
+  font-weight: 300;
+  letter-spacing: 0.2rem;
+}
+
+.continer-sign-section-5 form input {
+  height: 4rem;
+  width: 30rem;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  color: #6a040f;
+  box-shadow: 0.5rem 0.5rem -1rem #333;
+  border: 0.2rem solid #1bae1b;
+}
+
+.continer-sign-section-5 form button {
+  height: 4rem;
+  width: 3rem;
+  border-radius: 1rem;
+  background-color: #1bae1b;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+.paragraph-end-section-5 {
+  text-align: center;
+  font-size: 1.7rem;
+  color: white;
+  margin-top: 3rem;
+  font-weight: 500;
+}
+
+form span {
+  color: #a2e946;
+  font-size: 2.9rem;
+  font-weight: 900;
+  position: absolute;
+  transform: translate(-6.2rem, 0rem);
+  visibility: hidden;
+}
+
+.eror {
+  border: 0.2rem solid red !important;
+}
+
+/* end of style section-5 */
+
+/* media responsive */
+@media (max-width: 1150px) {
+  html {
+    font-size: 50%;
+  }
+
+  .section-4 {
+    height: auto;
+    padding: 30px;
+  }
+  .continer-gallery {
+    border: 2px solid;
+  }
+  .section-3 {
+    height: auto;
+    padding: 100px;
+  }
+  .continer-all-cards {
+    margin-top: 10rem;
+  }
+}
+
+@media (max-width: 960px) {
+  .continer-all-cards {
+    border: 2px solid;
+    height: auto;
+    width: 90%;
+  }
+
+  .continer-card {
+    margin: 0 3rem 5rem;
+    width: auto;
+    height: 35rem;
+  }
+}
+
+@media (max-width: 815px) {
+  html {
+    font-size: 40%;
+  }
+  nav {
+    height: auto;
+    padding-top: 1rem;
+  }
+  .head-section-1 {
+    transform: translateY(40rem);
+  }
+  .img-section-2 {
+    top: 70rem;
+  }
+}
+@media (max-width: 600px) {
+  nav a {
+    margin: auto 2rem;
+  }
+}
+@media (max-width: 470px) {
+  html {
+    font-size: 30%;
+  }
+}
+
+/* end of media responsive */

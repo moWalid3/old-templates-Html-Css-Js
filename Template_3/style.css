@@ -1,0 +1,435 @@
+:root {
+  --redcolor: #e41c6f;
+}
+
+/* common  */
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  outline: none;
+  list-style: none;
+  box-sizing: border-box;
+
+
+}
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+.section-2 h1,
+.section-3 h1,
+.section-4 h1
+  {
+  font-size: 5rem;
+  font-weight: 500;
+  margin: 12rem auto;
+  width: fit-content;
+  text-align: center;
+  letter-spacing: 0.5rem;
+  text-shadow: 0.3rem 0.3rem 0.4rem gray;
+  border-bottom: 0.2rem solid;
+}
+/* end of common  */
+
+/* <!-- section-1 --> */
+.section-1 {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.3)
+    ),
+    url(images/bg.jpg) center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.heading-section {
+  font-size: 5rem;
+  background-color: var(--redcolor);
+  color: white;
+  width: 40%;
+  text-align: center;
+  margin: 0 auto;
+  letter-spacing: 1rem;
+  font-weight: 900;
+  padding: 0.5rem 0;
+  border-bottom: 0.4rem solid white;
+  transform: translateY(10rem) skew(-10deg);
+  text-shadow: 0.3rem 0.3rem 0.2rem black;
+}
+.section-1 img {
+  width: 25rem;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 22rem;
+  padding: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 0.7rem dotted var(--redcolor);
+  object-fit: cover;
+}
+.section-1 h3 {
+  font-size: 3rem;
+  font-weight: 400;
+  padding: 0.5rem 2rem;
+  letter-spacing: 0.5rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) skew(-10deg);
+  top: 50rem;
+  background-color: var(--redcolor);
+  color: white;
+  text-shadow: 0.2rem 0.2rem 0.2rem gray;
+}
+.section-1 a {
+  font-size: 3rem;
+  padding: 0.5rem 2rem;
+  letter-spacing: 0.2rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 60rem;
+  color: white;
+  background-color: rgba(128, 128, 128, 0.479);
+  border-radius: 1rem;
+  border: 0.2rem solid var(--redcolor);
+}
+.section-1 a:hover {
+  background-color: rgba(128, 128, 128, 0.667);
+}
+
+/* <!-- end of section-1 --> */
+
+/* <!--  section-2 --> */
+.section-2 {
+  width: 100%;
+  height: 140vh;
+}
+.section-2 nav {
+  height: 4rem;
+  width: 100%;
+  background-color: var(--redcolor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0.3rem 0.3rem 0.4rem gray, -0.3rem -0.3rem 0.4rem gray;
+  
+}
+/* for js class toggle */
+.styke{
+  position: fixed;
+  top:0;
+  z-index: 33;
+}
+/*end :: for js class toggle */
+.section-2 nav div {
+  width: 40%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.navbarlinks{
+  color: black;
+  font-size: 2rem;
+  padding: 0 1rem 0.3rem;
+  position: relative;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  transition: all 0.3s;
+}
+.navbarlinks::before {
+  content: "";
+  width: 0;
+  height: 0.15rem;
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transition: all 0.3s;
+}
+.navbarlinks:hover::before {
+  width: 100%;
+}
+.navbarlinks:hover {
+  color: white;
+}
+/* for js class  */
+.change.navbarlinks{
+  color: white;
+
+}
+.change.navbarlinks::before{
+  width: 100%;
+}
+/*end :: for js class  */
+
+
+.section-2 .continer-proggres {
+  height: 35rem;
+  width: 60rem;
+  margin: 15rem auto 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.section-2 .continer-proggres div {
+  width: 100%;
+  height: 3rem;
+  background-color: #ccc;
+  box-shadow: 0.2rem 0.2rem 1rem #555;
+  border-radius: 0 0.3rem 0.3rem 0;
+}
+.section-2 .continer-proggres div p span {
+  font-weight: 900;
+  margin: 0 0.2rem;
+}
+.section-2 .continer-proggres div p {
+  font-size: 2rem;
+  padding-left: 1rem;
+  height: 100%;
+  background-color: var(--redcolor);
+  border-radius: 0 0.3rem 0.3rem 0;
+
+  color: white;
+}
+.proggres-1 {
+  width: 97%;
+}
+.proggres-2 {
+  width: 89%;
+}
+.proggres-3 {
+  width: 85%;
+}
+.proggres-4 {
+  width: 87%;
+}
+.proggres-5 {
+  width: 80%;
+}
+.proggres-6 {
+  width: 70%;
+}
+.proggres-7 {
+  width: 50%;
+}
+
+.continer-about {
+  width: 80%;
+  height: 20rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.continer-about :first-child,
+.continer-about :last-child{
+  align-self: flex-start;
+}
+
+
+.continer-about div h4 {
+  font-size: 2rem;
+  color: #fff;
+  background-color: #777;
+  width: 25rem;
+  letter-spacing: 0.3rem;
+  transform: skew(-10deg);
+  box-shadow: 0.2rem 0.2rem 0.5rem #555;
+  text-align: center;
+}
+.continer-about div i{
+  font-size: 10rem;
+}
+
+
+
+/* <!-- end of section-2 --> */
+
+/* <!-- section-3 --> */
+.section-3 {
+  background-color: #eef;
+  width: 100%;
+  height: 200vh;
+}
+.section-3 h1 {
+  padding-top: 15rem !important;
+}
+
+.section-3 .continer-product {
+  width: 100rem;
+  margin: 10rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.product-card {
+  width: 40rem;
+  height: 22rem;
+  margin: 1rem;
+  box-shadow: 0.3rem 0.3rem 0.4rem #777;
+  border-radius: 0.5rem;
+  transition: all 0.4s;
+  position: relative;
+  overflow: hidden;
+}
+.section-3 .continer-product div img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+}
+.section-3 .continer-product div:hover {
+  box-shadow: 1rem 1rem 1rem #777;
+}
+.section-3 .continer-product div:hover .information-product {
+  background-color: rgba(245, 245, 245, 0.81);
+  transition: all 0.4s;
+}
+.section-3 .continer-product div:hover .information-product a {
+  transform: translateY(0);
+  transition: all 0.4s 0.3s;
+}
+.section-3 .continer-product div:hover .information-product p {
+  transform: translateY(0);
+  transition: all 0.4s 0.3s;
+}
+.section-3 .continer-product div:hover .information-product h2 {
+  transform: translateY(0);
+  transition: all 0.4s 0.4s;
+}
+
+.information-product {
+  font-size: 2rem;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  background-color: red;
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgba(245, 245, 245, 0);
+  transition: all 0.4s;
+}
+.information-product p {
+  color: var(--redcolor);
+  transform: translateY(-15rem);
+  transition: all 0.4s;
+}
+.information-product h2 {
+  transform: translateY(-7rem);
+  transition: all 0.4s;
+}
+
+.information-product a {
+  font-size: 3rem;
+  padding: 0.5rem 2rem;
+  letter-spacing: 0.2rem;
+  color: white;
+  background-color: rgba(128, 128, 128, 0.479);
+  border-radius: 1rem;
+  border: 0.2rem solid var(--redcolor);
+  transform: translateY(9rem);
+  transition: all 0.4s;
+}
+/* <!-- end of section-3 --> */
+
+/* <!-- section-4 --> */
+.section-4{
+  width: 100%;
+  height:65vh;
+  background-color: #555;
+}
+.section-4 h1{
+  margin: 0 auto;
+  padding-top: 6rem;
+  color: white;
+}
+.section-4 form{
+  margin:5rem auto ;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 50rem;
+  height: 25rem;
+}
+.section-4 form input{
+  height: 4rem;
+  /* margin-top: 1rem; */
+ padding: .4rem;
+ border: .2rem solid var(--redcolor);
+ border-radius: .4rem;
+
+}
+textarea{
+  margin: 1rem 0 .5rem;
+ padding: .4rem;
+ height: 10rem;
+ max-height: 10rem;
+ max-width: 100%;
+ border: .2rem solid var(--redcolor);
+ border-radius: .4rem;
+
+
+}
+.submit{
+  background-color: var(--redcolor);
+  color: white;
+  font-size: 2rem;
+  letter-spacing: .3rem;
+}
+.submit:hover{
+  background-color: #e41c6fc8;
+  cursor: pointer;
+}
+/* <!-- end of section-4 --> */
+
+/* footer */
+footer{
+  height: 30vh;
+  width: 100%;
+  background-color: rgb(59, 58, 58);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+}
+.continer-icon-footer{
+  width: 30rem;
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.continer-icon-footer a{
+height: 100%;
+width: 5rem;
+background-color: var(--redcolor);
+border-radius: 1rem;
+text-align: center;
+transition: all .3s;
+}
+.continer-icon-footer a:hover{
+  opacity: .8;
+}
+
+
+footer p{
+  color: antiquewhite;
+  font-size: 2rem;
+  letter-spacing: .3rem;
+  
+}
+/* end of footer */
+
